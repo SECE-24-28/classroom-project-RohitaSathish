@@ -1,22 +1,26 @@
 import "./App.css";
-import React from "react";
-import CapsuleBanner from "./capsule/CapsuleBanner";
+import GetInTouchComponent from "./get-in-touch/getintouch-component";
+import ImpactAtaGlanceComponent from "./impact-at-a-glance/impact-at-a-glance-component";
+import OurPromiseComponent from "./our-promise/out-promise-component";
+// import FlexBoxComponent from "./flex-box/flex-box-component";
+// import HelloWorldComponent from "./hello-world/hello-world-component";
+// import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
+// import PostionComponent from "./positioning/position-component";
+// import SymbolOfExcellenceComponent from "./symbol-of-excellence/symbol-of-execllence-component";
+import TrustedbyComponent from "./trusted-by/trusted-by-component";
 
 function App() {
   return (
-     <div
-      style={{
-        display: "flex",
-        justifyContent: "center", // horizontal center
-        alignItems: "center",     // vertical center
-        height: "100vh",          // full viewport height
-        width: "100vw",           // full viewport width
-        margin: 0,
-        padding: 0,
-      }}
-    >
-
-      <CapsuleBanner />
+    <div>
+      {/* <HelloWorldComponent /> */}
+      {/* <FlexBoxComponent /> */}
+      {/* <LeadersTomorrowComponent /> */}
+      {/* <SymbolOfExcellenceComponent /> */}
+      {/* <PostionComponent /> */}
+      {/* <TrustedbyComponent /> */}
+      {/* <GetInTouchComponent /> */}
+      {/* <ImpactAtaGlanceComponent /> */}
+      <OurPromiseComponent/>
     </div>
   );
 }
