@@ -1,7 +1,7 @@
 import "./App.css";
-import GetInTouchComponent from "./get-in-touch/getintouch-component";
-import ImpactAtaGlanceComponent from "./impact-at-a-glance/impact-at-a-glance-component";
-import OurPromiseComponent from "./our-promise/out-promise-component";
+//import GetInTouchComponent from "./get-in-touch/getintouch-component";
+//import ImpactAtaGlanceComponent from "./impact-at-a-glance/impact-at-a-glance-component";
+// import OurPromiseComponent from "./our-promise/our-promise-component";
 // import FlexBoxComponent from "./flex-box/flex-box-component";
 // import HelloWorldComponent from "./hello-world/hello-world-component";
 // import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
@@ -17,10 +17,10 @@ function App() {
       {/* <LeadersTomorrowComponent /> */}
       {/* <SymbolOfExcellenceComponent /> */}
       {/* <PostionComponent /> */}
-      {/* <TrustedbyComponent /> */}
+       <TrustedbyComponent />  
       {/* <GetInTouchComponent /> */}
       {/* <ImpactAtaGlanceComponent /> */}
-      <OurPromiseComponent/>
+       {/* <OurPromiseComponent/>  */}
     </div>
   );
 }
