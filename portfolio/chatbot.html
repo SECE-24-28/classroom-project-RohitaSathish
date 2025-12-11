@@ -20,14 +20,76 @@
         <h1>Chat With My AI Bot</h1>
         
         <div class="chatbot-container">
-            <iframe 
-                src="https://www.chatbase.co/chatbot-iframe/bCMILE777WzT8fCbBcP-a"
-                width="100%" 
-                height="700"
-                frameborder="0"
-                style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            </iframe>
+            <div class="chat-interface">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="bot-message">
+                        <strong>AI Bot:</strong> Hello! I'm Rohita's AI assistant. Ask me anything about her resume, skills, education, or experience!
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Ask me about Rohita's background..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            
+            <div class="chatbot-info">
+                <p><strong>You can ask me about:</strong></p>
+                <ul>
+                    <li>Rohita's education and college</li>
+                    <li>Her technical skills and programming languages</li>
+                    <li>Her hobbies and interests</li>
+                    <li>Contact information</li>
+                </ul>
+            </div>
         </div>
     </section>
+
+    <script>
+        const responses = {
+            'education': "Rohita is currently pursuing B.E. in Computer Science and Engineering at Sri Eshwar College of Engineering. She completed her schooling at Honey Bunch Senior Secondary School, Pollachi.",
+            'skills': "Rohita's technical skills include HTML, CSS, JavaScript, Python, C, Java, Problem Solving, and Creative Thinking.",
+            'hobbies': "Rohita enjoys drawing and spending time with her pets. These activities help her stay balanced and inspired.",
+            'contact': "You can reach Rohita at rohita.s2024cse@sece.ac.in or connect with her on LinkedIn.",
+            'college': "Rohita studies at Sri Eshwar College of Engineering, pursuing Computer Science and Engineering.",
+            'programming': "Rohita knows several programming languages including Python, C, Java, and web technologies like HTML, CSS, and JavaScript."
+        };
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const messages = document.getElementById('chatMessages');
+            const userMessage = input.value.trim();
+            
+            if (!userMessage) return;
+            
+            // Add user message
+            messages.innerHTML += `<div class="user-message"><strong>You:</strong> ${userMessage}</div>`;
+            
+            // Generate bot response
+            let botResponse = "I'm here to help you learn about Rohita! You can ask about her education, skills, hobbies, or contact information.";
+            
+            const lowerMessage = userMessage.toLowerCase();
+            for (let key in responses) {
+                if (lowerMessage.includes(key)) {
+                    botResponse = responses[key];
+                    break;
+                }
+            }
+            
+            // Add bot response
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bot-message"><strong>AI Bot:</strong> ${botResponse}</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 500);
+            
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        document.getElementById('chatInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </body>
 </html>

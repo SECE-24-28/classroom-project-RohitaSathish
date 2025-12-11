@@ -294,14 +294,93 @@ nav ul li a:hover {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    text-align: center;
     margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.chat-messages {
+    flex: 1;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    background: white;
+    margin-bottom: 15px;
+}
+
+.bot-message, .user-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.bot-message {
+    background: #f7fafc;
+    border-left: 4px solid #667eea;
+}
+
+.user-message {
+    background: #e6fffa;
+    border-left: 4px solid #38b2ac;
+    text-align: right;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.chat-input-container button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.chat-input-container button:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
 }
 
 .chatbot-info {
-    font-size: 18px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #667eea;
+}
+
+.chatbot-info p {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.chatbot-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chatbot-info li {
+    padding: 5px 0;
     color: #4a5568;
-    margin: 0;
 }
 
 /* Mobile Responsive */
@@ -333,6 +412,11 @@ nav ul li a:hover {
 
     .chatbot-container {
         padding: 20px;
+        grid-template-columns: 1fr;
+    }
+    
+    .chat-interface {
+        height: 400px;
     }
 
     .contact-links {
